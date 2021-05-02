@@ -4,6 +4,7 @@ import { Alert, Card, Form, Col, Button } from 'react-bootstrap';
 import './assets/css/style.css';
 
 import StarsBox from './components/StarsBox/StarsBox';
+import Loading from './components/loader/loader';
 
 export default class App extends Component {
 
@@ -97,7 +98,7 @@ export default class App extends Component {
             {this.state.loading ? (
               <>
                 <div className="widthSpace"></div>
-                <p>Loading ...</p>
+                <Loading />
                 <div className="widthSpace"></div>
               </>
             ) : (
