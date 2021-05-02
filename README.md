@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# City Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Author**: Mohammad Khaled Abu Mattar
+**Version**: 1.0.0
 
-## Available Scripts
+Data Flow
 
-In the project directory, you can run:
+![Data Flow](./public/assets/img/dataflow.png "Data Flow")
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Web App for Locate on the map with a stunning, simple, and easy-to-use gui.
 
-### `npm test`
+## Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/MKAbuMattar/city-explorer.git
 
-### `npm run build`
+cd city-explorer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm i
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Architecture
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
-### `npm run eject`
+languages
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+JavaScript, reactjs
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+libraries
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+#react-bootstrap
+npm install react-bootstrap bootstrap
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#axios
+npm install axios
+```
 
-## Learn More
+## Change Log
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+this app has quick and fast connection to the api, 4ms for get data.
 
-### Code Splitting
+## Credit and Collaborations
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+this app  made With ❤ & a lot ☕ By Mohammad Khaled Abu Mattar
 
-### Analyzing the Bundle Size
+Name of feature: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Estimate of time needed to complete: 2h
 
-### Making a Progressive Web App
+Start time: 4:12
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Finish time: 7:30
 
-### Advanced Configuration
+Actual time needed to complete: ~3h
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+***
 
-### Deployment
+A link to the deployed version of your latest code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://bcity.netlify.app/
 
-### `npm run build` fails to minify
+A link to your public Trello board.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://trello.com/b/yIyzWYc8/city-explorer
+
+A question within the context of today’s lab assignment.
+
+nothing.
+
+An observation about the lab assignment, or related ‘Ah-hah!’ moment.
+
+nothing.
+
+How long you spent working on this assignment.
+
+3h
