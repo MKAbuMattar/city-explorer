@@ -57,7 +57,7 @@ this app has quick and fast connection to the api, 4ms for get data.
 
 this app  made With ❤ & a lot ☕ By Mohammad Khaled Abu Mattar
 
-Name of feature: 
+Name of feature: get data using `axios`, check if the request has errors, and display the error, without crashing the app, or you send empty request, to limit connection to api.
 
 Estimate of time needed to complete: 2h
 
