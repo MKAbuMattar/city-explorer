@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Alert, Card, Form, Col, Button } from 'react-bootstrap';
+import './assets/css/style.css';
+
+import StarsBox from './components/StarsBox/StarsBox';
 
 export default class App extends Component {
 
@@ -72,6 +75,7 @@ export default class App extends Component {
   render() {
     return (
       <>
+        <StarsBox />
         <main className='grid'>
           <div className="box">
             <h1>City Explorer</h1>
