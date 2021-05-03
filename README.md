@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Mohammad Khaled Abu Mattar
-**Version**: 1.0.0
+**Version**: 1.1.0
 
 ## Lab 06
 
