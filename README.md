@@ -1,11 +1,22 @@
 # City Explorer
 
 **Author**: Mohammad Khaled Abu Mattar
-**Version**: 1.0.0
+**Version**: 1.1.0
+
+## Lab 06
 
 Data Flow locationiq API
 
+My partner is Dina Khaleel.
+
 ![Data Flow](./public/assets/img/dataflow.png "Data Flow")
+
+***
+
+## Lab 07
+
+My partner is Ayah Zaareer.
+Ayah Zaareer's repository, This was a nice project; I don't understand variable names as in the constructor at app in this.state (output1, output2), but the rest of the code is simple to understand; I read spaghetti code, and Ayah Zaareer's code follows the rules; to better, modify variable names, and break app.js into tiny components.
 
 Data Flow My Own API
 
