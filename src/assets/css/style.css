@@ -18,8 +18,9 @@ body {
   background: rgba(19, 35, 47, 0.9);
   padding: 2.5rem;
   min-width: 37.5rem;
-  max-width: 37.5rem;
-  width: 37.5rem;
+  max-width: 90%;
+  max-height: 98%;
+  margin-top: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 0.25rem 0.625rem 0.25rem rgb(19 35 47 / 30%);
   color: white;
