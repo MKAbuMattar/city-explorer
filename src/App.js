@@ -38,14 +38,14 @@ export default class App extends Component {
     try {
       if (this.state.searchQuery !== ``) {
 
-        const weatherURL = `${this.state.weatherApiURL}`
+        const weatherURL = `${this.state.weatherApiURL}/weather`
         const weatherRequest = await axios.get(weatherURL)
 
         this.setState({
           weatherData: weatherRequest.data
         })
 
-        const url = `${this.state.apiURL}?key=${this.state.apiKEY}&q=${this.state.searchQuery}&format=${this.state.fileFormat}`;
+        const url = `${this.state.apiURL}/v1/search.php?key=${this.state.apiKEY}&q=${this.state.searchQuery}&format=${this.state.fileFormat}`;
         const request = await axios.get(url);
         this.setState({
           data: request.data[0],

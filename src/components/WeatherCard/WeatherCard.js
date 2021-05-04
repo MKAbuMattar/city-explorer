@@ -34,7 +34,10 @@ export default class WeatherCard extends Component {
                                               : ('north-northWest')}
             </Card.Text>
             <Card.Text>
-              Low Temp: {this.props.lowTemp}
+              Temp: {this.props.temp}
+            </Card.Text>
+            <Card.Text>
+              Min Temp: {this.props.minTemp}
             </Card.Text>
             <Card.Text>
               Max Temp: {this.props.maxTemp}

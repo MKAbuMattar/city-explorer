@@ -5,11 +5,11 @@ export default class LocationCard extends Component {
   render() {
     return (
       <>
-        <div className="widthSpace"></div>
+        <div className="whiteSpace"></div>
         <Card style={{ width: '18rem' }}>
           <Card.Img
             variant="top"
-            src={`${this.props.apiURLMap}?key=${this.props.apiKEY}&center=${this.props.data.lat},${this.props.data.lon}&zoom=10`}
+            src={`${this.props.apiURLMap}/v3/staticmap?key=${this.props.apiKEY}&center=${this.props.data.lat},${this.props.data.lon}&zoom=10`}
             alt={this.props.data.display_name}
           />
           <Card.Body>
@@ -19,7 +19,7 @@ export default class LocationCard extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-        <div className="widthSpace"></div>
+        <div className="whiteSpace"></div>
       </>
     )
   }

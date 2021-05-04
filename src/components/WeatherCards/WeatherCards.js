@@ -6,23 +6,24 @@ export default class WeatherCards extends Component {
   render() {
     return (
       <>
-        <div className="widthSpace"></div>
-        <h1>Weather in {this.props.weatherData.timezone}</h1>
+        <div className="whiteSpace"></div>
+        <h1>Weather</h1>
         <Row className="justify-content-md-center">
-          {this.props.weatherData.data.map(result => (
+          {this.props.weatherData.map((result, index) => (
             <Col md="auto">
               <WeatherCard
-                key={result.moonrise_ts}
-                validDate={result.valid_date}
-                windCdir={result.wind_cdir}
-                lowTemp={result.low_temp}
-                maxTemp={result.max_temp}
-                description={result.weather.description}
+                key={index}
+                validDate={result.date}
+                temp={result.temp}
+                windCdir={result.windCdir}
+                minTemp={result.minTemp}
+                maxTemp={result.maxTemp}
+                description={result.description}
               />
             </Col>
           ))}
         </Row>
-        <div className="widthSpace"></div>
+        <div className="whiteSpace"></div>
       </>
     )
   }

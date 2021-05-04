@@ -5,7 +5,7 @@ export default class SearchForm extends Component {
   render() {
     return (
       <>
-        <div className="widthSpace"></div>
+        <div className="whiteSpace"></div>
         <Form onSubmit={this.props.getLocation}>
           <Form.Row className="align-items-center">
             <Col xs="auto">
@@ -20,7 +20,7 @@ export default class SearchForm extends Component {
             </Col>
           </Form.Row>
         </Form>
-        <div className="widthSpace"></div>
+        <div className="whiteSpace"></div>
       </>
     )
   }
