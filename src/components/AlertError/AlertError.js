@@ -5,11 +5,11 @@ export default class AlertError extends Component {
   render() {
     return (
       <>
-        <div className="widthSpace"></div>
+        <div className="whiteSpace"></div>
         <Alert variant="danger" show={this.props.alertError} onClose={this.props.closeAlertError} dismissible>
           <Alert.Heading>{`${this.props.error}`}</Alert.Heading>
         </Alert>
-        <div className="widthSpace"></div>
+        <div className="whiteSpace"></div>
       </>
     )
   }
