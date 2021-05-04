@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
-import WeatherCard from '../WeatherCard/WeatherCard'
+import MovieCard from '../MovieCard/MovieCard'
 
-export default class WeatherCards extends Component {
+export default class MovieCards extends Component {
   render() {
     return (
       <>
         <div className="whiteSpace"></div>
-        <h1>Weather</h1>
-        {this.props.weatherData &&
+        <h1>Movies</h1>
+        {this.props.movieData &&
           <Row className="justify-content-md-center">
-            {this.props.weatherData.map((result, index) => (
+            {this.props.movieData.map((result, index) => (
               <Col md="auto">
-                <WeatherCard
+                <MovieCard
                   key={index}
-                  validDate={result.date}
-                  temp={result.temp}
-                  windCdir={result.windCdir}
-                  minTemp={result.minTemp}
-                  maxTemp={result.maxTemp}
+                  title={result.title}
+                  img={result.img}
+                  releaseDate={result.releaseDate}
                   description={result.description}
                 />
               </Col>
