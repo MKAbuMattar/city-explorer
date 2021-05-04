@@ -8,11 +8,12 @@ import AlertError from '../../components/AlertError/AlertError'
 import SearchForm from '../../components/SearchForm/SearchForm'
 import LocationCard from '../../components/LocationCard/LocationCard'
 import WeatherCards from '../../components/WeatherCards/WeatherCards'
+import MovieCards from '../../components/MovieCards/MovieCards'
 
 export default class Index extends Component {
 
   componentDidMount() {
-    console.clear();
+    // console.clear();
   }
 
   render() {
@@ -40,6 +41,10 @@ export default class Index extends Component {
 
                     <WeatherCards
                       weatherData={this.props.weatherData}
+                    />
+
+                    <MovieCards
+                      movieData={this.props.movieData}
                     />
 
                   </>

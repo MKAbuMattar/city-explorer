@@ -19,7 +19,7 @@ body {
   padding: 2.5rem;
   min-width: 37.5rem;
   max-width: 90%;
-  max-height: 98%;
+  max-height: 99.65%;
   margin-top: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 0.25rem 0.625rem 0.25rem rgb(19 35 47 / 30%);
@@ -38,6 +38,11 @@ body {
   width: 100%;
   height: 60%;
   object-fit: cover;
+}
+
+.cardDescription {
+  height: 200px;
+  overflow-y: auto;
 }
 
 .whiteSpace {
