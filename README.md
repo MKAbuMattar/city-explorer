@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Mohammad Khaled Abu Mattar
-**Version**: 1.1.0
+**Version**: 1.2.0
 
 ## Lab 06
 
@@ -16,6 +16,7 @@ My partner is Dina Khaleel.
 ## Lab 07
 
 My partner is Ayah Zaareer.
+
 Ayah Zaareer's repository, This was a nice project; I don't understand variable names as in the constructor at app in this.state (output1, output2), but the rest of the code is simple to understand; I read spaghetti code, and Ayah Zaareer's code follows the rules; to better, modify variable names, and break app.js into tiny components.
 
 Data Flow My Own API
@@ -23,10 +24,20 @@ Data Flow My Own API
 ![Data Flow](./public/assets/img/data-flow.png "Data Flow")
 
 
+***
+
+## Lab 08
+
+My partner is Enas Batayneh.
+
+Enas's project,  was a nice, she need to delete files the not used   , otherwise  the code is easy to understand, she have some issues in design, the code follows the rules, she should modify some files, and devid  the "app.js" into  components and refocus on the design.
+
+![Data Flow](./public/assets/img/data-api.png "Data Flow")
+
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
-Web App for Locate on the map with a stunning, simple, and easy-to-use gui, and for weather.
+Web App for Locate on the map with a stunning, simple, and easy-to-use gui, My express server talk to two server `Weather bit API` & `Movie DB API`.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -82,6 +93,9 @@ npm i cors
 
 #dotenv
 npm i dotenv
+
+#superagent
+npm i superagent
 ```
 
 ## Change Log
@@ -96,7 +110,7 @@ this app has quick and fast connection to the api, 4ms for get data, and you com
 
 this app  made With ❤ & a lot ☕ By Mohammad Khaled Abu Mattar
 
-Name of feature: get data using `axios`, check if the request has errors, and display the error, without crashing the app, or you send empty request, to limit connection to api, add `express` for own server, and push `express` server to `heroku` for back end.
+Name of feature: get data using `axios`, check if the request has errors, and display the error, without crashing the app, or you send empty request, to limit connection to api, add `express` for own server, and push `express` server to `heroku` for back end talk to two server `Weather bit API` & `Movie DB API` and `express` server reformat the row data form `Weather bit API` & `Movie DB API`, response to my webapp `frontend`.
 
 lab 06
 
@@ -107,6 +121,8 @@ Start time: 4:12
 Finish time: 7:30
 
 Actual time needed to complete: ~3h
+
+***
 
 lab 07
 
@@ -120,7 +136,23 @@ Actual time needed to complete: ~4:30h
 
 total 
 
-Actual time needed to complete: 7:30h
+Actual time needed to complete: ~7:30h
+
+***
+
+lab 08
+
+Estimate of time needed to complete: 4h
+
+Start time: 11:30 am
+
+Finish time: 2:30 am
+
+Actual time needed to complete: ~4h
+
+total 
+
+Actual time needed to complete: ~11:30h
 
 ***
 
@@ -144,4 +176,4 @@ nothing.
 
 How long you spent working on this assignment.
 
-7:30h
+~11:30h
