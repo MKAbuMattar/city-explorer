@@ -65,18 +65,8 @@ export default class App extends Component {
       });
     }
 
-    this.getWeather();
     this.getMovie();
-  }
-
-  getWeather = async () => {
-
-    const weatherURL = `${this.state.ownApiURL}/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`
-    const weatherRequest = await axios.get(weatherURL)
-    this.setState({
-      weatherData: weatherRequest.data
-    })
-
+    this.getWeather();
   }
 
   getMovie = async () => {
@@ -84,8 +74,17 @@ export default class App extends Component {
     const movieRequest = await axios.get(movieURL)
     this.setState({
       movieData: movieRequest.data,
+    })
+  }
+
+  getWeather = async () => {
+    const weatherURL = `${this.state.ownApiURL}/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`
+    const weatherRequest = await axios.get(weatherURL)
+    this.setState({
+      weatherData: weatherRequest.data,
       loading: false,
     })
+
   }
 
   updateSearchQuery = (event) => {
