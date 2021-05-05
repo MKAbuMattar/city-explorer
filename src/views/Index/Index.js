@@ -13,7 +13,7 @@ import MovieCards from '../../components/MovieCards/MovieCards'
 export default class Index extends Component {
 
   componentDidMount() {
-    // console.clear();
+    console.clear();
   }
 
   render() {

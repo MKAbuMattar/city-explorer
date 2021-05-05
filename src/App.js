@@ -25,7 +25,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    // console.clear();
+    console.clear();
   }
 
   getLocation = async (event) => {
@@ -56,7 +56,7 @@ export default class App extends Component {
         });
       }
     } catch (err) {
-      // console.clear();
+      console.clear();
       this.setState({
         loading: false,
         error: err,
