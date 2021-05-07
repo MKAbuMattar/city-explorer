@@ -13,9 +13,10 @@ export default class App extends Component {
       apiURLMap: process.env.REACT_APP_LOCATIONIQ_API_URL_MAP,
       apiKEY: process.env.REACT_APP_LOCATIONIQ_API_KEY,
       ownApiURL: process.env.REACT_APP_MY_OWN_API_URL,
-      data: {},
+      locationData: {},
       weatherData: {},
       movieData: {},
+      restaurantData: {},
       searchQuery: '',
       fileFormat: 'json',
       loading: false,
@@ -25,7 +26,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    console.clear();
+    // console.clear();
   }
 
   getLocation = async (event) => {
@@ -39,20 +40,29 @@ export default class App extends Component {
     try {
       if (this.state.searchQuery !== ``) {
 
-        const url = `${this.state.apiURL}/v1/search.php?key=${this.state.apiKEY}&q=${this.state.searchQuery}&format=${this.state.fileFormat}`;
-        const request = await axios.get(url);
-        this.setState({
-          data: request.data[0],
+        const request = await axios.get(`${this.state.apiURL}/v1/search.php`, {
+          params: {
+            key: this.state.apiKEY,
+            q: this.state.searchQuery,
+            format: this.state.fileFormat
+          }
+        });
 
+        this.setState({
+          locationData: request.data[0],
           error: ''
         });
+
+        this.getRestaurant(this.state.searchQuery);
+        this.getWeather(this.state.locationData.lat, this.state.locationData.lon);
+        this.getMovie(this.state.searchQuery);
 
       } else {
         this.setState({
           loading: false,
           error: 'Please enter a country or a city name.',
           alertError: true,
-          data: {}
+          locationData: {}
         });
       }
     } catch (err) {
@@ -61,30 +71,44 @@ export default class App extends Component {
         loading: false,
         error: err,
         alertError: true,
-        data: {}
+        locationData: {}
       });
     }
-
-    this.getMovie();
-    this.getWeather();
   }
 
-  getMovie = async () => {
-    const movieURL = `${this.state.ownApiURL}/movie?city=${this.state.searchQuery}`
-    const movieRequest = await axios.get(movieURL)
+  getWeather = async (lat, lon) => {
+    const weatherRequest = await axios.get(`${this.state.ownApiURL}/weather`, {
+      params: {
+        lat: lat,
+        lon: lon,
+      }
+    });
+    this.setState({
+      weatherData: weatherRequest.data
+    })
+  }
+
+  getMovie = async (city) => {
+    const movieRequest = await axios.get(`${this.state.ownApiURL}/movie`, {
+      params: {
+        city: city,
+      }
+    });
     this.setState({
       movieData: movieRequest.data,
+      loading: false,
     })
   }
 
-  getWeather = async () => {
-    const weatherURL = `${this.state.ownApiURL}/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`
-    const weatherRequest = await axios.get(weatherURL)
+  getRestaurant = async (loc) => {
+    const restaurantRequest = await axios.get(`${this.state.ownApiURL}/restaurant`, {
+      params: {
+        location: loc,
+      }
+    });
     this.setState({
-      weatherData: weatherRequest.data,
-      loading: false,
+      restaurantData: restaurantRequest.data
     })
-
   }
 
   updateSearchQuery = (event) => {
@@ -111,8 +135,9 @@ export default class App extends Component {
           getLocation={this.getLocation}
           updateSearchQuery={this.updateSearchQuery}
           loading={this.state.loading}
-          data={this.state.data}
+          locationData={this.state.locationData}
           weatherData={this.state.weatherData}
+          restaurantData={this.state.restaurantData}
           movieData={this.state.movieData}
           apiURLMap={this.state.apiURLMap}
           apiKEY={this.state.apiKEY}
