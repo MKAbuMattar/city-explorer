@@ -9,11 +9,12 @@ import SearchForm from '../../components/SearchForm/SearchForm'
 import LocationCard from '../../components/LocationCard/LocationCard'
 import WeatherCards from '../../components/WeatherCards/WeatherCards'
 import MovieCards from '../../components/MovieCards/MovieCards'
+import RestaurantCards from '../../components/RestaurantCards/RestaurantCards'
 
 export default class Index extends Component {
 
   componentDidMount() {
-    console.clear();
+    // console.clear();
   }
 
   render() {
@@ -31,12 +32,12 @@ export default class Index extends Component {
               <Loading />
             ) : (
               <>
-                {this.props.data.display_name ? (
+                {this.props.locationData.display_name ? (
                   <>
                     <LocationCard
                       apiURLMap={this.props.apiURLMap}
                       apiKEY={this.props.apiKEY}
-                      data={this.props.data}
+                      locationData={this.props.locationData}
                     />
 
                     <WeatherCards
@@ -45,6 +46,10 @@ export default class Index extends Component {
 
                     <MovieCards
                       movieData={this.props.movieData}
+                    />
+
+                    <RestaurantCards
+                      restaurantData={this.props.restaurantData}
                     />
 
                   </>

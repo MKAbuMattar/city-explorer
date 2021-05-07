@@ -7,7 +7,7 @@ export default class MovieCards extends Component {
     return (
       <>
         {console.log(this.props.movieData)}
-        {console.clear()}
+        {/* {console.clear()} */}
         {this.props.movieData && (
           <>
             <div className="whiteSpace"></div>
