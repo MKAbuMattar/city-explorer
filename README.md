@@ -23,7 +23,6 @@ Data Flow My Own API
 
 ![Data Flow](./public/assets/img/data-flow.png "Data Flow")
 
-
 ***
 
 ## Lab 08
@@ -110,7 +109,9 @@ this app has quick and fast connection to the api, 4ms for get data, and you com
 
 this app  made With ❤ & a lot ☕ By Mohammad Khaled Abu Mattar
 
-Name of feature: get data using `axios`, check if the request has errors, and display the error, without crashing the app, or you send empty request, to limit connection to api, add `express` for own server, and push `express` server to `heroku` for back end talk to two server `Weather bit API` & `Movie DB API` and `express` server reformat the row data form `Weather bit API` & `Movie DB API`, response to my webapp `frontend`.
+Name of feature: get data using `axios`, check if the request has errors, and display the error, without crashing the app, or you send empty request, to limit connection to api, add `express` for own server, and push `express` server to `heroku` for back end talk to two server `Weather bit API` & `Movie DB API` and `express` server reformat the row data form `Weather bit API` & `Movie DB API`, response to my webapp `frontend`, New API `Yelp` now you can see a restaurants in your area, as cards has image, price, title, and button for visit the restaurant you chose it.
+
+***
 
 lab 06
 
@@ -156,6 +157,38 @@ Actual time needed to complete: ~11:30h
 
 ***
 
+lab 09
+
+Estimate of time needed to complete: 1h
+
+Start time: 11:30 am
+
+Finish time: 1:30 am
+
+Actual time needed to complete: ~1:30h
+
+total 
+
+Actual time needed to complete: ~13:00h
+
+***
+
+lab 10
+
+Estimate of time needed to complete: 2h
+
+Start time: 01:00 am
+
+Finish time: 2:30 am
+
+Actual time needed to complete: ~1:30h
+
+total 
+
+Actual time needed to complete: ~14:30h
+
+***
+
 A link to the deployed version of your latest code.
 
 https://bcity.netlify.app/
@@ -176,4 +209,4 @@ nothing.
 
 How long you spent working on this assignment.
 
-~11:30h
+~14:30h
