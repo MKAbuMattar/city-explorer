@@ -7,8 +7,8 @@ export default class MovieCards extends Component {
     return (
       <>
         {console.log(this.props.movieData)}
-        {/* {console.clear()} */}
-        {this.props.movieData && (
+        {console.clear()}
+        {(this.props.movieData.constructor !== Object) && (
           <>
             <div className="whiteSpace"></div>
             <h1>Movies</h1>

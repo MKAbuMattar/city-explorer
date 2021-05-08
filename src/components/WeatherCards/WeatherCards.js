@@ -7,8 +7,8 @@ export default class WeatherCards extends Component {
     return (
       <>
         {console.log(this.props.weatherData)}
-        {/* {console.clear()} */}
-        {this.props.weatherData && (
+        {console.clear()}
+        {(this.props.weatherData.constructor !== Object) && (
           <>
             <div className="whiteSpace"></div>
             <h1>Weather</h1>

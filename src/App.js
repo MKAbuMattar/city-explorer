@@ -53,9 +53,9 @@ export default class App extends Component {
           error: ''
         });
 
-        this.getRestaurant(this.state.searchQuery);
         this.getWeather(this.state.locationData.lat, this.state.locationData.lon);
         this.getMovie(this.state.searchQuery);
+        this.getRestaurant(this.state.searchQuery);
 
       } else {
         this.setState({
@@ -95,20 +95,26 @@ export default class App extends Component {
       }
     });
     this.setState({
-      movieData: movieRequest.data,
-      loading: false,
+      movieData: movieRequest.data
     })
   }
 
   getRestaurant = async (loc) => {
-    const restaurantRequest = await axios.get(`${this.state.ownApiURL}/restaurant`, {
-      params: {
-        location: loc,
-      }
-    });
-    this.setState({
-      restaurantData: restaurantRequest.data
-    })
+    try {
+      const restaurantRequest = await axios.get(`${this.state.ownApiURL}/restaurant`, {
+        params: {
+          location: loc,
+        }
+      });
+      this.setState({
+        restaurantData: restaurantRequest.data,
+        loading: false,
+      })
+    } catch (err) {
+      this.setState({
+        loading: false
+      });
+    }
   }
 
   updateSearchQuery = (event) => {

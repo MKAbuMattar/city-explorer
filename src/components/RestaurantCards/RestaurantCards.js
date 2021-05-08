@@ -7,8 +7,8 @@ export default class RestaurantCards extends Component {
     return (
       <>
         {console.log(this.props.restaurantData)}
-        {/* {console.clear()} */}
-        {this.props.restaurantData !== null ? (
+        {console.clear()}
+        {this.props.restaurantData.constructor !== Object ? (
           <>
             <div className="whiteSpace"></div>
             <h1>Restaurants</h1>
