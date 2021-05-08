@@ -48,9 +48,9 @@ export default class Index extends Component {
                       movieData={this.props.movieData}
                     />
 
-                    {/* <RestaurantCards
+                    <RestaurantCards
                       restaurantData={this.props.restaurantData}
-                    /> */}
+                    />
 
                   </>
                 ) : (
